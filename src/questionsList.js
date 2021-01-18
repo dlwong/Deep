@@ -11,6 +11,6 @@ const questionsList = [
   {
     title: 'Could we stay friends if I shared that I was interested in your ex?'
   }
-]
+];
 
 export default questionsList;
