@@ -5,20 +5,20 @@ export default class QuestionScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        predict: 0,
+      predict: 0,
         questions: [
-            {
-                id: 1,
-                title: 'Who are you?'
-            },
-            {
-                id: 2,
-                title: 'Who are you2?'
-            },
-            {
-                id: 3,
-                title: 'Who are you3?'
-            }
+          {
+            title: 'What would you miss the most if we stopped being friends?'
+          },
+          {
+            title: 'What annoys you about me but you are over it?'
+          },
+          {
+            title: 'If my mom asked me about you, what would I say?'
+          },
+          {
+            title: 'Could we stay friends if I shared that I was interested in your ex?'
+          }
         ]
     }
 }
