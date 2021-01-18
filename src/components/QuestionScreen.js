@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
-import questionsList from '../questionsList.js';
+import questionsList from '../data/questionsList.js';
 
 export default function QuestionScreen() {
   const max = questionsList.length;
@@ -14,7 +14,7 @@ export default function QuestionScreen() {
 
   return (
     <View style={styles.container}>
-      <Text>{ questionsList[count] }</Text>
+      <Text style={{fontSize: 30, marginLeft: 10}}>{ questionsList[count] }</Text>
         <View style={styles.buttonContainer}>
           <Button
           title="Another Question"
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
    alignItems: 'center'
   },
   buttonContainer: {
-    margin: 20
+    margin: 50,
+    top: 150
   }
 });
