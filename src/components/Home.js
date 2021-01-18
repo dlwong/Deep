@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, View, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 
 export default function Home({ navigation }) {
     return (
       <View style={styles.container}>
-        <TouchableHighlight onPress = {() => navigation.navigate('Question')} >
+        <TouchableOpacity onPress = {() => navigation.navigate('Question')} >
           <Image style={styles.imageContainer} source={require('../assets/icon.png')}/>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     );
 }
