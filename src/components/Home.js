@@ -17,10 +17,9 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     justifyContent: 'center',
     height: 350,
-    width: 
-    350, },
+    width: 350 },
   container: {
    flex: 1,
-   justifyContent: 'center',
+   justifyContent: 'center'
   }
 });

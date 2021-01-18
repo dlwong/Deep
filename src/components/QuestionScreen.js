@@ -1,30 +1,21 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
+import questionsList from '../questionsList.js';
 
 export default class QuestionScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
       predict: 0,
-        questions: [
-          {
-            title: 'What would you miss the most if we stopped being friends?'
-          },
-          {
-            title: 'What annoys you about me, but you are over it?'
-          },
-          {
-            title: 'If my mom asked me about you, what would I say?'
-          },
-          {
-            title: 'Could we stay friends if I shared that I was interested in your ex?'
-          }
-        ]
+        questions: questionsList
     }
 }
 
   componentDidMount() {
-    const rand = Math.floor(Math.random() * (3 - 1)) + 1;
+    const max = this.state.questions.length;
+    const min = 0;
+    const rand = Math.floor(Math.random() * (max - min)) + min;
+
     this.setState({ predict: rand })
   }
 
