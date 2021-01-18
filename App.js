@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, StyleSheet, View, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Image, TouchableHighlight } from 'react-native';
 
 export default class App extends Component {
   _onPressButton() {
@@ -12,30 +12,6 @@ export default class App extends Component {
         <TouchableHighlight onPress = {this._onPressButton} >
         <Image style={styles.imageContainer} source={require('./icon.png')}/>
         </TouchableHighlight>
-        {/* <View style={styles.buttonContainer}>
-          <Button
-            onPress={this._onPressButton}
-            title="Press Me"
-          />
-        </View>
-        <View style={styles.buttonContainer}>
-          <Button
-            onPress={this._onPressButton.bind(this)}
-            title="Press Me"
-            color="#841584"
-          />
-        </View>
-        <View style={styles.alternativeLayoutButtonContainer}>
-          <Button
-            onPress={this._onPressButton}
-            title="This looks great!"
-          />
-          <Button
-            onPress={this._onPressButton}
-            title="OK!"
-            color="#841584"
-          />
-        </View> */}
       </View>
     );
   }
