@@ -6,17 +6,17 @@ import { createStackNavigator } from '@react-navigation/stack';
 function Home({ navigation }) {
     return (
       <View style={styles.container}>
-        <TouchableHighlight onPress = {() => navigation.navigate('Details')} >
+        <TouchableHighlight onPress = {() => navigation.navigate('Question')} >
           <Image style={styles.imageContainer} source={require('./icon.png')}/>
         </TouchableHighlight>
       </View>
     );
 }
 
-function DetailsScreen() {
+function QuestionScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
+      <Text>Question Screen</Text>
     </View>
   );
 }
@@ -28,7 +28,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen options={{headerShown: false}} name="Home" component={Home} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Question" component={QuestionScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -45,13 +45,5 @@ const styles = StyleSheet.create({
   container: {
    flex: 1,
    justifyContent: 'center',
-  },
-  buttonContainer: {
-    margin: 20
-  },
-  alternativeLayoutButtonContainer: {
-    margin: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
   }
 });
