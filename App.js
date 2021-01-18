@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image, TouchableHighlight, Text } from 'react-native';
+import { StyleSheet, View, Image, TouchableHighlight, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -46,6 +46,10 @@ class QuestionScreen extends Component {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>{ this.state.questions[num].title }</Text>
+        <Button
+        title="Another Question"
+        onPress={() => this.props.navigation.push('Question')}
+      />
       </View>
     );
   }
