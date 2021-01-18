@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 
 export default class QuestionScreen extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class QuestionScreen extends Component {
             title: 'What would you miss the most if we stopped being friends?'
           },
           {
-            title: 'What annoys you about me but you are over it?'
+            title: 'What annoys you about me, but you are over it?'
           },
           {
             title: 'If my mom asked me about you, what would I say?'
@@ -34,11 +34,24 @@ export default class QuestionScreen extends Component {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>{ this.state.questions[num].title }</Text>
-        <Button
-        title="Another Question"
-        onPress={() => this.props.navigation.push('Question')}
-      />
+          <View style={styles.buttonContainer}>
+            <Button
+            title="Another Question"
+            onPress={() => this.props.navigation.push('Question')}
+            color="#a55fc1"
+            />
+        </View>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+   flex: 1,
+   justifyContent: 'center',
+  },
+  buttonContainer: {
+    margin: 20
+  }
+});
