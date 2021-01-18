@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Image, TouchableHighlight } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default class App extends Component {
+class Home extends Component {
   _onPressButton() {
     console.log("Pushed button Start the Game!")
   }
@@ -15,6 +17,18 @@ export default class App extends Component {
       </View>
     );
   }
+}
+
+const Stack = createStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
 const styles = StyleSheet.create({
